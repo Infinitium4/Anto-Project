@@ -7,10 +7,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
 
+    steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1
         with:
@@ -19,7 +17,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd ~/mon-app
+
             git pull origin main
-            docker compose pull
-            docker compose up -d --build
-            docker system prune -f
+
+            docker compose restart
