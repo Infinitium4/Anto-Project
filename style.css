@@ -2,21 +2,16 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #eef2f7;
 }
-
-/* NAVBAR */
 .navbar {
     background: white !important;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-
-/* SIDEBAR */
 .sidebar {
     background: linear-gradient(135deg, #2c3e50, #34495e);
     color: white;
     padding: 25px;
     border-radius: 15px;
 }
-
 .avatar img {
     border-radius: 50%;
     border: 3px solid white;
@@ -26,28 +21,22 @@ body {
     display: block;
     margin: auto;
 }
-
 .card {
     background: transparent;
     border: none;
 }
-
 .sidebar h4 {
     margin-top: 20px;
     font-weight: 600;
     border-left: 4px solid #3498db;
     padding-left: 10px;
 }
-
 .sidebar ul {
     padding-left: 18px;
 }
-
-/* MAIN */
 .main {
     padding: 20px 30px;
 }
-
 .section {
     background: white;
     padding: 20px;
@@ -55,14 +44,12 @@ body {
     margin-bottom: 20px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
-
 .section h2 {
     font-weight: 600;
     color: #2c3e50;
     margin-bottom: 15px;
     position: relative;
 }
-
 .section h2::after {
     content: "";
     width: 40px;
@@ -71,8 +58,6 @@ body {
     display: block;
     margin-top: 5px;
 }
-
-/* EXPERIENCES */
 .card-exp {
     background: #f8f9fa;
     padding: 15px;
@@ -81,22 +66,17 @@ body {
     border-left: 4px solid #3498db;
     transition: 0.2s;
 }
-
 .card-exp:hover {
     background: #eef5ff;
     transform: translateX(5px);
 }
-
 .card-exp h5 {
     font-weight: 600;
     margin-bottom: 5px;
 }
-
 ul li {
     margin-bottom: 5px;
 }
-
-/* RESPONSIVE */
 @media (max-width: 768px) {
     .sidebar {
         margin-bottom: 20px;
@@ -110,18 +90,15 @@ ul li {
     margin-top: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
-
 .sidebar-card h4 {
     border-left: 4px solid #6c8fb3; /* bleu-gris */
     padding-left: 10px;
     margin-top: 15px;
     font-weight: 600;
 }
-
 .sidebar-card ul {
     padding-left: 18px;
 }
-
 .sidebar-card li {
     margin-bottom: 5px;
 }

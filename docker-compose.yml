@@ -5,10 +5,7 @@ services:
     restart: always
 
     ports:
-      - "80:80"
+      - "8080:80"
 
     volumes:
-      - ./site:/usr/local /apache2/htdocs/
-
-volumes:
-  Anto-Project:
+      - ./:/usr/local/apache2/htdocs/
