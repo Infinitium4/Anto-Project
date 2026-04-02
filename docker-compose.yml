@@ -6,6 +6,9 @@ services:
 
     ports:
       - "8080:80"
+      - "8443:443"
 
     volumes:
       - ./:/usr/local/apache2/htdocs/
+      - ./certs:/usr/local/apache2/conf/certs/
+      - ./my-httpd.conf:/usr/local/apache2/conf/httpd.conf
