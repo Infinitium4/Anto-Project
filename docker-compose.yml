@@ -1,0 +1,14 @@
+services:
+  web:
+    image: httpd:2.4
+    container_name: portfolio-web
+    restart: always
+
+    ports:
+      - "80:80"
+
+    volumes:
+      - ./site:/usr/local /apache2/htdocs/
+
+volumes:
+  Anto-Project:
