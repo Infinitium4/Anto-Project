@@ -188,3 +188,199 @@ footer,
         font-size: 2rem;
     }
 }
+/* ================= PROJECT MODAL ================= */
+
+/* Taille 80% */
+.modal-dialog {
+    max-width: 80vw;
+    width: 80vw;
+    margin: 1.75rem auto;
+}
+
+.modal-content {
+    background: #1e293b;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    color: white;
+}
+
+/* Hero */
+.modal-hero {
+    background: #0f172a;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px 20px;
+    position: relative;
+    overflow: hidden;
+}
+.modal-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 80%, rgba(59,130,246,0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+.modal-hero img.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+}
+.modal-hero-title {
+    font-size: clamp(28px, 4vw, 52px);
+    font-weight: 600;
+    color: #3b82f6;
+    letter-spacing: 4px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+.modal-hero-meta {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 3px;
+    margin-top: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Body */
+.modal-body {
+    padding: 28px 32px;
+    background: #1e293b;
+}
+
+.modal-section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 10px;
+}
+
+.modal-description {
+    font-size: 14px;
+    color: #cbd5f5;
+    line-height: 1.75;
+}
+
+/* Stats */
+.stat-item {
+    background: rgba(255,255,255,0.04);
+    border: 0.5px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.stat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(59,130,246,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+.stat-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+}
+.stat-value {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+}
+
+/* Screenshot */
+.modal-screenshot {
+    background: #0f172a;
+    border-radius: 10px;
+    border: 0.5px solid rgba(255,255,255,0.08);
+    overflow: hidden;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-screenshot img,
+.modal-screenshot video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.modal-screenshot-placeholder {
+    font-size: 12px;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 1px;
+}
+
+/* Badges technos */
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.tech-badge {
+    background: rgba(59,130,246,0.12);
+    border: 0.5px solid rgba(59,130,246,0.3);
+    color: #93c5fd;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.15s;
+}
+.tech-badge:hover {
+    background: rgba(59,130,246,0.22);
+    color: #93c5fd;
+}
+
+/* Footer */
+.modal-footer {
+    background: transparent;
+    border-top: 0.5px solid rgba(255,255,255,0.08);
+    padding: 14px 32px;
+}
+.btn-modal-close {
+    background: transparent;
+    border: 0.5px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.5);
+    padding: 8px 22px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.15s;
+}
+.btn-modal-close:hover {
+    background: rgba(255,255,255,0.06);
+    color: white;
+}
+
+/* Animation d'ouverture */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s ease;
+    transform: scale(0.9) translateY(20px);
+}
+.modal.show .modal-dialog {
+    transform: scale(1) translateY(0);
+}
+.modal-backdrop.show { opacity: 0.65; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-dialog { max-width: 95vw; width: 95vw; }
+    .modal-body { padding: 20px 16px; }
+    .modal-footer { padding: 12px 16px; }
+}

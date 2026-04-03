@@ -32,11 +32,8 @@
 
     <div class="container projects">
         <div class="row g-4">
-
-            <!-- Projet 1 -->
             <div class="col-md-4">
-                <div class="card">
-
+                <div class="card" data-bs-toggle="modal" data-bs-target="#modalPacman" style="cursor:pointer;">
                     <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -56,7 +53,6 @@
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
-
                     <div class="card-body">
                         <div class="card-title">Pac-Man C++</div>
                         <p class="card-text">Reproduction du célèbre jeu Pac-Man en C++ avec IA et interface graphique.</p>
@@ -66,9 +62,8 @@
                 </div>
             </div>
 
-            <!-- Projet 2 -->
             <div class="col-md-4">
-                <div class="card">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#modalImmoForm" style="cursor:pointer;">
                     <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -81,32 +76,164 @@
                                 <img src="media/immoform3.png" class="d-block w-100">
                             </div>
                         </div>
-
                         <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
-                    </div> <!-- ✅ FERMETURE ICI -->
-
+                    </div>
                     <div class="card-body">
                         <div class="card-title">ImmoForm</div>
-                        <p class="card-text">Développement d’un site web moderne...</p>
+                        <p class="card-text">Développement d'un site web moderne...</p>
                         <span class="badge badge-tech">HTML</span>
                         <span class="badge badge-tech">CSS</span>
                         <span class="badge badge-tech">JS</span>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="footer">
-        © 2026 CGN — Tous droits réservés
+    <div class="modal fade" id="modalPacman" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+
+                <div class="modal-hero">
+                    <img class="hero-bg" src="media/pacman2.png" alt="">
+                    <div class="modal-hero-title">Pac-Man C++</div>
+                    <div class="modal-hero-meta">C++ · SFML · 2026</div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row g-4">
+
+                        <!-- Colonne gauche -->
+                        <div class="col-12 col-md-6">
+                            <div class="modal-section-label">À propos du projet</div>
+                            <p class="modal-description mb-4">
+                                Reproduction fidèle du classique Pac-Man développée en C++ avec SFML.
+                            </p>
+                            <div class="mb-3">
+                                <div class="modal-section-label">Technologies</div>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">C++</span>
+                                    <span class="tech-badge">SFML 2.6</span>
+                                    <span class="tech-badge">CMake</span>
+                                    <span class="tech-badge">Git</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="modal-section-label">Liens</div>
+                                <div class="tech-badges">
+                                    <a href="#" class="tech-badge">GitHub →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Colonne droite : vidéo directement dans la modale -->
+                        <div class="col-12 col-md-6">
+                            <div class="modal-section-label">Aperçu</div>
+                            <div class="modal-screenshot">
+                                <video width="100%" controls>
+                                    <source src="media/pacman.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn-modal-close" data-bs-dismiss="modal">Fermer</button>
+                    <a href="https://github.com/Infinitium4/Anto-Project" target="_blank" class="btn btn-primary">
+                        Voir sur GitHub →
+                    </a>
+                </div>
+
+            </div>
+        </div>
     </div>
 
+
+    <!-- MODALE : ImmoForm -->
+    <div class="modal fade" id="modalImmoForm" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-hero">
+                    <!-- <img class="hero-bg" src="media/immoform1.png" alt=""> -->
+                    <div class="modal-hero-title">ImmoForm</div>
+                    <div class="modal-hero-meta">HTML · CSS · JavaScript · 2024</div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-12 col-md-6">
+                            <div class="modal-section-label">À propos du projet</div>
+                            <p class="modal-description mb-4">
+                                <!-- DESCRIPTION LONGUE -->
+                                Développement d'un site web moderne...
+                            </p>
+
+                            <div class="modal-section-label">Caractéristiques</div>
+                            <div class="d-flex flex-column gap-2">
+                                <div class="stat-item">
+                                    <div class="stat-icon">🏠</div>
+                                    <div>
+                                        <div class="stat-label">Type</div>
+                                        <div class="stat-value">Site vitrine immobilier</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 d-flex flex-column gap-4">
+                            <div>
+                                <div class="modal-section-label">Aperçu</div>
+                                <div class="modal-screenshot">
+                                    <img src="media/immoform1.png" alt="Screenshot ImmoForm">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="modal-section-label">Technologies</div>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">HTML</span>
+                                    <span class="tech-badge">CSS</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="modal-section-label">Liens</div>
+                                <div class="tech-badges">
+                                    <a href="https://github.com/Infinitium4/PROJET-IMOFORM-CGN-" class="tech-badge">GitHub →</a>
+                                    <a href="#" class="tech-badge">Démo →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn-modal-close" data-bs-dismiss="modal">Fermer</button>
+                    <a href="https://github.com/votre-repo/immoform" target="_blank" class="btn btn-primary">
+                        Voir sur GitHub →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="text-center py-3 mt-5 border-top">
+        <p class="mb-1 fw-bold">CGN</p>
+        <p class="mb-0 small">© 2026 CGN - Informatique & Développement</p>
+    </footer>
+    <script>
+        document.getElementById('modalPacman').addEventListener('hide.bs.modal', function () {
+            this.querySelectorAll('video').forEach(v => { v.pause(); v.currentTime = 0; });
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
